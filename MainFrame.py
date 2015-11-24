@@ -3,10 +3,11 @@ Created on Nov 15, 2015
 
 @author: TranBui
 '''
-from tkinter import Frame,BOTH,Tk
+from Tkinter import Frame,BOTH,Tk
 import datetime
 from ChartingCanvas import ChartingCanvas
 from StockReader import StockReader
+from MatplotCharting import MatplotCharting
 class MainFrame(Frame):
     '''
     presents our human interface in an TkInter image window
@@ -36,10 +37,14 @@ def main():
     root.geometry("700x700+300+0")
     d1 = datetime.datetime(2015, 1, 1)
     d2 = datetime.datetime.today()
-    x = d2 - d1
-    y = x / 10
-    print((d1 + y).date())
+ 
     mainFrame = MainFrame(root,"AAPL", d1, d2)
+     
+    #Plotting with matplot
+    
+    stockReader =StockReader("AAPL", d1, d2)
+    matplotCharting = MatplotCharting(stockReader)
+    
     root.mainloop()  
 
 

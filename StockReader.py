@@ -3,10 +3,9 @@ Created on Nov 15, 2015
 
 @author: TranBui
 '''
-import urllib.request
+import urllib
 from datetime import datetime
 from Stock import Stock
-from builtins import int
 class StockReader(object):
     
     '''
@@ -22,7 +21,7 @@ class StockReader(object):
         self.start = start
         self.end = end
         self.setUrl()
-        data = urllib.request.urlopen(self.url).read()
+        data = urllib.urlopen(self.url).read()
         data = data.decode("utf-8")
         #split the data and put into the list. Also get rids of the top and bottom col
         rawstock_list = data.split('\n')[1:-1]

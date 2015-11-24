@@ -4,7 +4,7 @@ Created on Nov 14, 2015
 @author: TranBui
 '''
 
-from tkinter import Frame,BOTH,Tk, Canvas
+from Tkinter import Frame,BOTH,Tk, Canvas
 from ViewPort import ViewPort
 from StockReader import StockReader
 import datetime
