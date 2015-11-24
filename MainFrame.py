@@ -10,6 +10,7 @@ from StockReader import StockReader
 class MainFrame(Frame):
     '''
     presents our human interface in an TkInter image window
+    The size for the frame is 700x700
     '''
 
 
